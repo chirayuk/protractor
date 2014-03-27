@@ -42,13 +42,9 @@ Protractor API 0.20.1
 * [WebdriverBy.prototype](#webdriverbyprototype)
 * [ProtractorBy.prototype.addLocator](#protractorbyprototypeaddlocator)
 * [ProtractorBy.prototype.binding](#protractorbyprototypebinding)
-* [ProtractorBy.prototype.select](#protractorbyprototypeselect)
-* [ProtractorBy.prototype.selectedOption](#protractorbyprototypeselectedoption)
-* [ProtractorBy.prototype.input](#protractorbyprototypeinput)
 * [ProtractorBy.prototype.model](#protractorbyprototypemodel)
 * [ProtractorBy.prototype.buttonText](#protractorbyprototypebuttontext)
 * [ProtractorBy.prototype.partialButtonText](#protractorbyprototypepartialbuttontext)
-* [ProtractorBy.prototype.textarea](#protractorbyprototypetextarea)
 * [ProtractorBy.prototype.repeater](#protractorbyprototyperepeater)
 
 ##webdriver
@@ -940,7 +936,7 @@ While in the debugger, commands can be scheduled through webdriver by
 entering the repl:
   debug> repl
   Press Ctrl + C to leave rdebug repl
-  > ptor.findElement(protractor.By.input('user').sendKeys('Laura'));
+  > ptor.findElement(protractor.By.model('user').sendKeys('Laura'));
   > ptor.debugger();
   debug> c
 
@@ -1057,66 +1053,6 @@ Type | Description
 {findElementsOverride: findElementsOverride, message: string} | 
 
 
-##[ProtractorBy.prototype.select](https://github.com/angular/protractor/blob/master/lib/locators.js#L102)
-
-**DEPRECATED** Use 'model' instead.
-
-
-###Example
-
-```html
-<select ng-model="user" ng-options="user.name for user in users"></select>
-```
-
-```javascript
-element(by.select('user'));
-```
-
-
-
-
-
-
-##[ProtractorBy.prototype.selectedOption](https://github.com/angular/protractor/blob/master/lib/locators.js#L121)
-
-
-
-
-###Example
-
-```html
-<select ng-model="user" ng-options="user.name for user in users"></select>
-```
-
-```javascript
-element(by.selectedOption("user"));
-```
-
-
-
-
-
-
-##[ProtractorBy.prototype.input](https://github.com/angular/protractor/blob/master/lib/locators.js#L138)
-
-**DEPRECATED** Use 'model' instead.
-
-
-###Example
-
-```html
-<input ng-model="user" type="text"/>
-```
-
-```javascript
-element(by.input('user'));
-```
-
-
-
-
-
-
 ##[ProtractorBy.prototype.model](https://github.com/angular/protractor/blob/master/lib/locators.js#L156)
 #### Use as: by.model(modelName)
 Find an element by ng-model expression.
@@ -1210,26 +1146,6 @@ searchText | string |
 Type | Description
 --- | ---
 {findElementsOverride: findElementsOverride, message: string} | 
-
-
-##[ProtractorBy.prototype.textarea](https://github.com/angular/protractor/blob/master/lib/locators.js#L227)
-
-**DEPRECATED** Use 'model' instead.
-
-
-###Example
-
-```html
-<textarea ng-model="user"></textarea>
-```
-
-```javascript
-element(by.textarea('user'));
-```
-
-
-
-
 
 
 ##[ProtractorBy.prototype.repeater](https://github.com/angular/protractor/blob/master/lib/locators.js#L245)
