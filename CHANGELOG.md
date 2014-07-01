@@ -1,3 +1,44 @@
+# 0.23.4
+_Note: Major version 0 releases are for initial development, and backwards incompatible changes may be introduced at any time._
+
+## Bug Fixes
+- ([93a9124](https://github.com/chirayuk/protractor/commit/93a91240a2760646f4c9565687d54af027d822b2))
+  fix(runner): support dart2js version 1.6.0-dev.0.0
+
+  This adds to commit 876a3c04c07a9f8d97e1edca3ec1f76e51e1a310
+
+  dart2js now refers to the global object as "self" (as a step toward "use
+  strict" since Primitives.computeGlobalThis() wouldn't work in strict
+  mode.)  So we now publish "self" to the global namespace to support dart
+  version 1.6.0-dev.0.0.
+
+  Refs:
+  - File: https://code.google.com/p/dart/source/browse/branches/bleeding_edge/dart/sdk/lib/js/dart2js/js_dart2js.dart?r=37483#100
+  - Revision r37483: https://code.google.com/p/dart/source/detail?r=37483
+  - Review: https://codereview.chromium.org//345533004
+  - Diff: https://code.google.com/p/dart/source/diff?r=37483&format=side&path=/branches/bleeding_edge/dart/sdk/lib/js/dart2js/js_dart2js.dart#sc_svn37483_100
+
+        - final JsObject context = _wrapToDart(Primitives.computeGlobalThis());
+        + final JsObject context = _wrapToDart(JS('', 'self'));
+
+
+# 0.23.3
+_Note: Major version 0 releases are for initial development, and backwards incompatible changes may be introduced at any time._
+
+## Bug Fixes
+
+- ([d7e6b9f](https://github.com/chirayuk/protractor/commit/d7e6b9f1e6a81b7f547f33ebab1a146ed4b34906))
+  clientsidescripts: findByModel should use testability API
+
+
+# 0.23.2
+_Note: Major version 0 releases are for initial development, and backwards incompatible changes may be introduced at any time._
+
+## Features
+
+- Use the Testability API.
+
+
 # 0.23.1
 _Note: Major version 0 releases are for initial development, and backwards incompatible changes may be introduced at any time._
 
