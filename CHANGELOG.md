@@ -1,3 +1,14 @@
+# 0.23.5
+_Note: Major version 0 releases are for initial development, and backwards incompatible changes may be introduced at any time._
+
+## Changes
+- use getTestability() for all Angular operations.
+- deprecate findRepeaterRows/Cols (they don't use the
+  testability API and there's better ways to do it -
+  especially once https://github.com/angular/protractor/issues/803
+  is fixed.)
+
+
 # 0.23.4
 _Note: Major version 0 releases are for initial development, and backwards incompatible changes may be introduced at any time._
 
