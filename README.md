@@ -1,6 +1,10 @@
 Protractor [![Build Status](https://travis-ci.org/angular/protractor.png?branch=master)](https://travis-ci.org/angular/protractor)
 ==========
 
+**NOTE**: This fork of Protractor supports AngularDart (for use
+with [protractor-dart](https://www.npmjs.org/package/protractor-dart))
+and may not work reliably with AngularJS.
+
 Protractor is an end to end test framework for [AngularJS](http://angularjs.org/) applications built on top of [WebDriverJS](https://code.google.com/p/selenium/wiki/WebDriverJs). Protractor runs tests against your application running in a real browser, interacting with it as a user would.
 
 Protractor can be run as a standalone binary, or included into your tests as a library. Use [Protractor as a library](https://github.com/angular/protractor/blob/master/docs/library-only.md) if you would like to manage WebDriver and your test setup yourself.
